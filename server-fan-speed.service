@@ -9,7 +9,7 @@ Restart=on-failure
 RestartSec=1s
 User=hetorusnl
 WorkingDirectory=/opt/server-fan-speed/
-ExecStart=/usr/bin/python3 .
+ExecStart=uv run .
 
 [Install]
 WantedBy=multi-user.target

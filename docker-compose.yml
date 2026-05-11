@@ -1,13 +1,12 @@
-version: "3"
-
 services:
   server-fan-speed:
-    image: hetorusnl/python-poetry
+    image: ghcr.io/astral-sh/uv:debian-slim
     container_name: server-fan-speed
     env_file: config.env
     ports:
       - 8000:8000
       - 8001:8001
+    working_dir: /code
     volumes:
       - .:/code
-    entrypoint: /code/run-server-fan-speed.sh
+    command: ./run-server-fan-speed.sh

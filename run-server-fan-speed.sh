@@ -6,5 +6,5 @@ set -Eeuxo pipefail
 # run the prepare script to install ipmitool
 ./prepare.sh
 
-# run the original entrypoint of the hetorusnl/python-poetry container
-/scripts/run.sh
+# start the python server using uv
+uv run main.py

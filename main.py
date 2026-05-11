@@ -98,10 +98,10 @@ def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
     """follows example shown on docs.python.org"""
     server_address = (HOST_ADDRESS, HOST_PORT)
     httpd = server_class(server_address, handler_class)
-    print("server created, running forever...")
+    print("server created, running forever...", flush=True)
     httpd.serve_forever()
 
 
 if __name__ == "__main__":
-    print("starting python server")
+    print("starting python server", flush=True)
     run(handler_class=RequestHandler)

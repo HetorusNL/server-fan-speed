@@ -33,8 +33,8 @@ after the service is started, the website should be available on `localhost:8000
 
 ## Debugging
 
-logs are shown in the docker logs or in `/var/log/syslog` when not using the recommended method, and more debugging information is available by manually running `poetry run python3 main.py` in the root directory of this repository, and observing the output.
+logs are shown in the docker logs or in `/var/log/syslog` when not using the recommended method, and more debugging information is available by manually running `uv run main.py` in the root directory of this repository, and observing the output.
 
 ## License
 
-MIT License, Copyright (c) 2023 Tim Klein Nijenhuis <tim@hetorus.nl>
+MIT License, Copyright (c) 2026 Tim Klein Nijenhuis <tim@hetorus.nl>
