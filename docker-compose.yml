@@ -1,12 +1,7 @@
 services:
   server-fan-speed:
-    image: ghcr.io/astral-sh/uv:debian-slim
+    image: hetorusnl/server-fan-speed
     container_name: server-fan-speed
     env_file: config.env
     ports:
       - 8000:8000
-      - 8001:8001
-    working_dir: /code
-    volumes:
-      - .:/code
-    command: ./run-server-fan-speed.sh

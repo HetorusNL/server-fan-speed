@@ -31,6 +31,10 @@ the service can be enabled and started on boot by the following commands:
 
 after the service is started, the website should be available on `localhost:8000`
 
+## GitHub Actions and container builds
+
+A GitHub Actions workflow is included at [.github/workflows/ci.yml](.github/workflows/ci.yml). It builds the container image on pushes to the default branch, pull requests, and manual runs, and publishes it to GitHub Container Registry and Docker hub when the workflow runs outside pull requests.
+
 ## Debugging
 
 logs are shown in the docker logs or in `/var/log/syslog` when not using the recommended method, and more debugging information is available by manually running `uv run main.py` in the root directory of this repository, and observing the output.
