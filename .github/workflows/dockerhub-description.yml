@@ -7,6 +7,7 @@ on:
     paths:
       - README.md
       - .github/workflows/dockerhub-description.yml
+  workflow_dispatch:
 
 jobs:
   update-docker-hub-description:
@@ -14,11 +15,11 @@ jobs:
 
     steps:
       # checkout the repo to $GITHUB_WORKSPACE
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # update the docker hub description and overview
       - name: Dockerhub description and overview update
-        uses: peter-evans/dockerhub-description@v3
+        uses: peter-evans/dockerhub-description@v5
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
