@@ -51,7 +51,6 @@ jobs:
 
       - name: Extract metadata for Docker Hub
         id: meta-dockerhub
-        if: github.event_name != 'pull_request'
         uses: docker/metadata-action@v5
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/server-fan-speed
